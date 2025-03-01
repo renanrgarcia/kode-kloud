@@ -1,0 +1,32 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.Docker", "5.Docker", "{B5D6EE60-3571-ED16-EFF9-6252ADEDA75A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.example-voting-app-main", "2.example-voting-app-main", "{28A21143-49D3-B314-0B30-5BD0E8824A77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Worker", "5.Docker\2.example-voting-app-main\worker\Worker.csproj", "{40803BC2-E1AC-992A-72C1-57D2DD19F487}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{40803BC2-E1AC-992A-72C1-57D2DD19F487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40803BC2-E1AC-992A-72C1-57D2DD19F487}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40803BC2-E1AC-992A-72C1-57D2DD19F487}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40803BC2-E1AC-992A-72C1-57D2DD19F487}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{28A21143-49D3-B314-0B30-5BD0E8824A77} = {B5D6EE60-3571-ED16-EFF9-6252ADEDA75A}
+		{40803BC2-E1AC-992A-72C1-57D2DD19F487} = {28A21143-49D3-B314-0B30-5BD0E8824A77}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E5EE1DE1-8552-4F3B-8611-F8EA4EA40528}
+	EndGlobalSection
+EndGlobal
