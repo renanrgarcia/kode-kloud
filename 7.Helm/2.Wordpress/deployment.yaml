@@ -1,0 +1,30 @@
+apiVersion: {{ include "apiVersion" . }}
+kind: Deployment
+metadata:
+  name: {{ include "common.names.fullname" . }}
+  namespace: {{ .Release.Namespace | quote }}
+  labels: {{- include "common.labels.standard" . | nindent 4 }}
+spec:
+  selector:
+    matchLabels: {{- include "common.labels.standard" . }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  template:
+    spec:
+      containers:
+        - name: wordpress
+          image: {{ template "wordpress.image" . }}
+      env:
+        - name: WORDPRESS_DATABASE_NAME
+          value: {{ include "wordpress.databaseName" . | quote }}
+        - name: WORDPRESS_DATABASE_USER
+          value: {{ include "wordpress.databaseUser" . | quote }}
+        - name: WORDPRESS_USERNAME
+          value: {{ .Values.wordpressUsername | quote }}
+        - name: WORDPRESS_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: {{ include "wordpress.secretName" . }}
+              key: wordpress-password
+        - name: WORDPRESS_BLOG_NAME
+          value: {{ .Values.wordpressBlogName | quote }}
