@@ -3,10 +3,9 @@ kind: Deployment
 metadata:
   name: myapp-deployment
   labels:
-    app: nginx
     tier: frontend
 spec:
-  replicas: 3
+  replicas: 6
   selector:
     matchLabels:
       app: myapp
